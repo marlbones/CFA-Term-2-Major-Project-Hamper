@@ -1,5 +1,7 @@
 <p id="notice"><%= notice %></p>
 
+<p>Welcome to Hamper. Lorem Ipsum introduction to Hamper paragraph <br> etc. etc. life oh life more paragraph</p>
+
 <h1>Products</h1>
 
 <table>
@@ -23,12 +25,12 @@
       <tr>
         <td><%= product.title %></td>
         <td><%= product.user.username %></td>
-        <td><%= product.cost %></td>
+        <td><%= number_to_currency(product.cost) %></td>
         <td><%= product.collection %></td>
         <td><%= product.items %></td>
         <td><%= product.contents %></td>
-        <td><%= product.perishables %></td>
-        <td><%= product.non_perishables %></td>
+        <td><%= true_false(product.perishables) %></td>
+        <td><%= true_false(product.non_perishables) %></td>
         <td><%= product.description %></td>
         <td><%= link_to 'Show', product %></td>
         <td><%= link_to 'Edit', edit_product_path(product) %></td>

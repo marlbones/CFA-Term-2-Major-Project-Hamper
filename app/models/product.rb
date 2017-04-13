@@ -1,3 +1,10 @@
 class Product < ApplicationRecord
   belongs_to :user
+
+validates :title, presence: true
+validates :collection, presence: true
+validates :items, presence: true
+validates :contents, presence: true
+validates :description, presence: true
+validates :cost, presence: true
 end
