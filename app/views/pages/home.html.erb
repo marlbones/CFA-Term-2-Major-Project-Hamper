@@ -2,8 +2,11 @@
 <p>Find me in app/views/pages/home.html.erb</p>
 
 <!-- Temporary Logout Link.  -->
+<h3>Welcome <%= @user.username %></h3>
   <% if user_signed_in? %>
   <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
   <% else %>
   <% end %>
+
+  <%= link_to 'Hampers', products_path %>
 <!-- Remove when styling  -->

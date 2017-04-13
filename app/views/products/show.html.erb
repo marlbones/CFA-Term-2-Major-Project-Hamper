@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @product.title %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @product.user %>
+</p>
+
+<p>
+  <strong>Cost:</strong>
+  <%= @product.cost %>
+</p>
+
+<p>
+  <strong>Collection:</strong>
+  <%= @product.collection %>
+</p>
+
+<p>
+  <strong>Items:</strong>
+  <%= @product.items %>
+</p>
+
+<p>
+  <strong>Contents:</strong>
+  <%= @product.contents %>
+</p>
+
+<p>
+  <strong>Perishables:</strong>
+  <%= @product.perishables %>
+</p>
+
+<p>
+  <strong>Non perishables:</strong>
+  <%= @product.non_perishables %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @product.description %>
+</p>
+
+<%= link_to 'Edit', edit_product_path(@product) %> |
+<%= link_to 'Back', products_path %>
