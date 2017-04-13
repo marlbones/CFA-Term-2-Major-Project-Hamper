@@ -8,6 +8,8 @@ end
 # Added gems
 # Devise for user model
 gem 'devise'
+# Materialize for sweet sweet Materialize style
+gem 'materialize-sass'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.2'
