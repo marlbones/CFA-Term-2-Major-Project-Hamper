@@ -23,7 +23,7 @@
 
   <div class="field">
     <%= f.label :collection %>
-    <%= f.number_field :collection %>
+    <%= f.select :collection, options_for_select([["Select One", ""], "Delivery", "Pickup", "Delivery or Pickup"]), :class => 'genForm_dropBox' %>
   </div>
 
   <div class="field">
