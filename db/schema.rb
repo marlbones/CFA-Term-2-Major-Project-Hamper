@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170413005452) do
+ActiveRecord::Schema.define(version: 20170413035843) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,7 +19,6 @@ ActiveRecord::Schema.define(version: 20170413005452) do
     t.string   "title"
     t.integer  "user_id"
     t.decimal  "cost"
-    t.integer  "collection",      default: 0
     t.integer  "items",           default: 5
     t.text     "contents"
     t.boolean  "perishables"
@@ -27,6 +26,7 @@ ActiveRecord::Schema.define(version: 20170413005452) do
     t.text     "description"
     t.datetime "created_at",                  null: false
     t.datetime "updated_at",                  null: false
+    t.string   "collection"
     t.index ["user_id"], name: "index_products_on_user_id", using: :btree
   end
 
