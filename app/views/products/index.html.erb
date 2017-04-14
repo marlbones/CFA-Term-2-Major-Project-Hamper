@@ -43,3 +43,11 @@
 <br>
 
 <%= link_to 'New Product', new_product_path %>
+<br>
+
+<!-- Sorts by filters. passes in order: string as params that activates if statements in controller  -->
+<p>Sort by:
+  <%= link_to "Created at", products_path(order: 'created_at') %>,
+  <%= link_to "cost", products_path(order: 'cost') %>,
+  <%= link_to "contents", products_path(order: 'contents') %> <!-- temporary. change for user.location -->
+</p>
