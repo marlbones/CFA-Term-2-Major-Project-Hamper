@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :products
-  root 'pages#home'
+  root 'products#index'
 
   devise_for :users, :controllers => { registrations: 'registrations' }
   # :controllers allocates custom made registration to devise
