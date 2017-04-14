@@ -19,4 +19,5 @@
 // This code makes f.select :collection work in products/_form
 $(document).ready(function() {
     $('select').material_select();
+    $(".button-collapse").sideNav();
 });
