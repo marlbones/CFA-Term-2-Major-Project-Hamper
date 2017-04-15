@@ -11,7 +11,8 @@ validates :cost, presence: true
 
   def self.search(search)
     where("title LIKE ?", "%#{search}%")
-    
+    where("contents LIKE ?", "%#{search}%")
+
   end
   # def self.search(search)
   #   if search
