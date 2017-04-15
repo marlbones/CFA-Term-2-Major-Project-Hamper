@@ -11,19 +11,16 @@ class ProductsController < ApplicationController
     else
       @products = Product.all.order(created_at: :desc)
     end
-    # @products = Product.search(params[:search])
+
     # Ordering stuff by what's in params
-    # @products = Product.all.order(created_at: :desc)
-    #
-    # if params[:order] == 'created_at'
-    #     @products = Product.all.order('created_at DESC')
-    # elsif params[:order] == 'cost'
-    #     @products = Product.all.order('cost ASC')
-    # elsif params[:order] == 'contents'
-    #     @products = Product.all.order('contents')
-    # else
-    #     @products = Product.all.order(created_at: :desc)
-    # end
+    if params[:order] == 'created_at'
+        @products = Product.all.order('created_at DESC')
+    elsif params[:order] == 'cost'
+        @products = Product.all.order('cost ASC')
+    elsif params[:order] == 'contents'
+        @products = Product.all.order('contents')
+    else
+    end
   end
 
   # GET /products/1
