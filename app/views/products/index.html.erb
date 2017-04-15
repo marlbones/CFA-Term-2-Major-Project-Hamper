@@ -9,6 +9,7 @@
     <tr>
       <th>Title</th>
       <th>User</th>
+      <th>Location</th>
       <th>Cost</th>
       <th>Collection</th>
       <th>Items</th>
@@ -25,6 +26,7 @@
       <tr>
         <td><%= product.title %></td>
         <td><%= product.user.username %></td>
+        <td><%= product.user.location %></td>
         <td><%= number_to_currency(product.cost) %></td>
         <td><%= product.collection %></td>
         <td><%= product.items %></td>
