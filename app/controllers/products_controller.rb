@@ -5,9 +5,15 @@ class ProductsController < ApplicationController
   # GET /products.json
    # GET /index?order=[created_at, cost, contents]
   def index
-    # Ordering stuff by what's in params
     @products = Product.all.order(created_at: :desc)
+    # Search function
+    if params[:search]
+      @products = Product.search(params[:search]).order("created_at DESC")
+    else
+      @products = Product.all.order(created_at: :desc)
+    end
 
+    # Ordering stuff by what's in params
     if params[:order] == 'created_at'
         @products = Product.all.order('created_at DESC')
     elsif params[:order] == 'cost'
@@ -15,7 +21,6 @@ class ProductsController < ApplicationController
     elsif params[:order] == 'contents'
         @products = Product.all.order('contents')
     else
-        @products = Product.all.order(created_at: :desc)
     end
   end
 
