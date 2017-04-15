@@ -6,8 +6,9 @@ class ProductsController < ApplicationController
    # GET /index?order=[created_at, cost, contents]
   def index
     @products = Product.all.order(created_at: :desc)
+    # Search function
     if params[:search]
-      @products = Product.search(params[:search])
+      @products = Product.search(params[:search]).order("created_at DESC")
     else
       @products = Product.all.order(created_at: :desc)
     end
