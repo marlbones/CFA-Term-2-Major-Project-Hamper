@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
   resources :products
   root 'products#index'
+  get 'pages/selldash'
   resources :conversations do
     resources :messages
  end
