@@ -26,7 +26,7 @@
     <% @products.each do |product| %>
       <tr>
         <td><%= product.title %></td>
-        <td><%= product.user.username %></td>
+        <td><%= link_to product.user.username, product.user %></td>
         <td><%= product.user.location %></td>
         <td><%= number_to_currency(product.cost) %></td>
         <td><%= product.collection %></td>
