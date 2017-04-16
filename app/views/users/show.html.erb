@@ -1,0 +1,8 @@
+<h1>Profile</h1>
+<p><%= @user.username %></p>
+<p><%= @user.email %></p>
+
+<!-- Refers to method in users_helper. Only makes link appear for current_user -->
+<% if correct_user?(@user) %>
+  <%= link_to 'Edit', edit_user_registration_path %>
+<% end %>
