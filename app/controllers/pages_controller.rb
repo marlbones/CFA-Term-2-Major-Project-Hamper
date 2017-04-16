@@ -4,6 +4,6 @@ class PagesController < ApplicationController
   end
 
   def selldash
-
+    @products = current_user.products
   end
 end
