@@ -45,7 +45,7 @@
 
 <h4>Requested items:</h4>
 <% @requests.each do |request| %>
-  <% if request.product.user.username == current_user.username %>
+  <% if correct_request?(request) %>
     <%= request.product.title %> |
     <%= request.product.user.username %> |
     <%= request.message %> |

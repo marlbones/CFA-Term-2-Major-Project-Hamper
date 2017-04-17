@@ -23,7 +23,7 @@
 <%= link_to 'Edit', edit_request_path(@request) %> |
 <%= link_to 'Back', requests_path %>
 
-<% if @request.product.user.username == current_user.username%>
+<% if correct_request?(@request)%>
   <%= link_to "Accept this request", accept_request_path(@request), method: :post %>
   <%= link_to "Reject this request", reject_request_path(@request), method: :post %>
 <% else %>
