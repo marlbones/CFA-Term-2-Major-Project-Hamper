@@ -42,10 +42,16 @@
 <%= link_to 'Create New Hamper', new_product_path %>
 
 <br>
-<!-- Temporary! This isn't working properly  -->
+
+<h4>Requested items:</h4>
 <% @requests.each do |request| %>
-  <%= request.product.title %> |
-  <%= request.product.user.username %> |
-  <%= request.message %>
-  <br>
+  <% if request.product.user.username == current_user.username %>
+    <%= request.product.title %> |
+    <%= request.product.user.username %> |
+    <%= request.message %> |
+    <%= request.user.username %> |
+    <%= link_to 'Show', request %>
+    <br>
+  <% else %>
+  <% end %>
 <% end %>
