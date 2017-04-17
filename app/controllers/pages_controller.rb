@@ -5,5 +5,6 @@ class PagesController < ApplicationController
 
   def selldash
     @products = current_user.products.order(created_at: :desc)
+    @requests = @products.requests
   end
 end
