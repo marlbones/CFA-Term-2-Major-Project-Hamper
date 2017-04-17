@@ -8,12 +8,12 @@ class RequestsController < ApplicationController
   end
 
   def accept
-    @request = current_user.requests.find(params[:id])
+    @request = Request.find(params[:id])
     @request.accept
   end
 
   def reject
-    @request = current_user.requests.find(params[:id])
+    @request = Request.find(params[:id])
     @request.reject
   end
 
