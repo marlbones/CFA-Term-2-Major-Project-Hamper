@@ -46,6 +46,7 @@
 <% @requests.each do |request| %>
   <%= request.product.title %> |
   <%= request.product.user.username %> |
-  <%= request.message %>
+  <%= request.message %> |
+  <%= link_to 'Show', request %>
   <br>
 <% end %>

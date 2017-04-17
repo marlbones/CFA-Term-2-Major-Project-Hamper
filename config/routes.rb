@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
 
-  resources :requests
+  resources :requests do
+    member do
+      post :accept
+      post :reject
+    end
+  end
   resources :products
   root 'products#index'
   get 'pages/selldash'

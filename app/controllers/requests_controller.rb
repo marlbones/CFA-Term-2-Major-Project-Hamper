@@ -7,6 +7,16 @@ class RequestsController < ApplicationController
     @requests = Request.all
   end
 
+  def accept
+    @request = current_user.requests.find(params[:id])
+    @request.accept
+  end
+
+  def reject
+    @request = current_user.requests.find(params[:id])
+    @request.reject
+  end
+
   # GET /requests/1
   # GET /requests/1.json
   def show
