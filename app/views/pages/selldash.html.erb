@@ -40,3 +40,12 @@
 </table>
 <br>
 <%= link_to 'Create New Hamper', new_product_path %>
+
+<br>
+<!-- Temporary! This isn't working properly  -->
+<% @requests.each do |request| %>
+  <%= request.product.title %> |
+  <%= request.product.user.username %> |
+  <%= request.message %>
+  <br>
+<% end %>
