@@ -1,5 +1,6 @@
 class Product < ApplicationRecord
   belongs_to :user
+  has_many :requests
 
   validates :title, presence: true
   validates :collection, presence: true
