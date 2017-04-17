@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :requests
   resources :products
   root 'products#index'
   get 'pages/selldash'

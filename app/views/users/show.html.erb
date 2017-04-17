@@ -1,8 +1,19 @@
 <h1>Profile</h1>
+<h3>User Info</h3>
 <p><%= @user.username %></p>
 <p><%= @user.email %></p>
 
 <!-- Refers to method in users_helper. Only makes link appear for current_user -->
 <% if correct_user?(@user) %>
   <%= link_to 'Edit', edit_user_registration_path %>
+<% end %>
+
+<% if correct_user?(@user) %>
+  <h3>Hampers you've requested</h3>
+  <% @requests.each do |request| %>
+    <%= request.product.title %> |
+    <%= request.product.user.username %> |
+    <%= request.message %>
+    <br>
+  <% end %>
 <% end %>
