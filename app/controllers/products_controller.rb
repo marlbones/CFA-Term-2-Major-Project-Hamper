@@ -24,11 +24,11 @@ class ProductsController < ApplicationController
     else
     end
 
-    @users = User.all
-    @hash = Gmaps4rails.build_markers(@users) do |user, marker|
-      marker.lat user.latitude
-      marker.lng user.longitude
-      marker.infowindow user.username
+
+    @hash = Gmaps4rails.build_markers(@products) do |product, marker|
+      marker.lat product.user.latitude
+      marker.lng product.user.longitude
+      marker.infowindow product.title
     end
   end
 
