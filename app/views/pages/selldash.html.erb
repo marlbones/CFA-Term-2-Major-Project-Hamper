@@ -46,12 +46,16 @@
 <h4>Requested items:</h4>
 <% @requests.each do |request| %>
   <% if correct_request?(request) %>
-    <%= request.product.title %> |
-    <%= request.product.user.username %> |
-    <%= request.message %> |
-    <%= request.user.username %> |
-    <%= link_to 'Show', request %>
-    <br>
+  <!-- Create another helper for below request approved check -->
+    <% if request.approved = nil %>
+      <%= request.product.title %> |
+      <%= request.product.user.username %> |
+      <%= request.message %> |
+      <%= request.user.username %> |
+      <%= link_to 'Show', request %>
+      <br>
+    <% else %>
+    <% end %>
   <% else %>
   <% end %>
 <% end %>
