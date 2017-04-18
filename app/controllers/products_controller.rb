@@ -5,6 +5,7 @@ class ProductsController < ApplicationController
   # GET /products.json
    # GET /index?order=[created_at, cost, contents]
   def index
+
     @products = Product.all.order(created_at: :desc)
     # Search function
     if params[:search]
@@ -21,6 +22,13 @@ class ProductsController < ApplicationController
     elsif params[:order] == 'contents'
         @products = Product.all.order('contents')
     else
+    end
+
+
+    @hash = Gmaps4rails.build_markers(@products) do |product, marker|
+      marker.lat product.user.latitude
+      marker.lng product.user.longitude
+      marker.infowindow product.title
     end
   end
 
