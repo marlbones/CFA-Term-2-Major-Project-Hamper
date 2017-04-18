@@ -10,6 +10,8 @@ end
 gem 'devise'
 # Materialize for sweet sweet Materialize style
 gem 'materialize-sass'
+# Rolify for authentication
+gem "rolify"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.2'
