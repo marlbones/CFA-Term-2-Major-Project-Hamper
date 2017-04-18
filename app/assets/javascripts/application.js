@@ -15,6 +15,8 @@
 //= require turbolinks
 //= require_tree .
 //= require materialize-sprockets
+//= require underscore
+//= require gmaps/google
 
 // This code makes f.select :collection work in products/_form
 $(document).ready(function() {

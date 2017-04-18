@@ -6,4 +6,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
   has_many :products
   has_many :requests
+
+  geocoded_by :location
+  after_validation :geocode
 end
