@@ -9,6 +9,32 @@
   </div>
 
   <div class="field">
+    <%= f.label 'About Me' %><br />
+    <%= f.text_field :about, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label 'Interests' %><br />
+    <%= f.text_field :interests, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label 'Favourite Food Items' %><br />
+    <%= f.text_field :favs, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label 'Dietry Requirements' %><br />
+    <%= f.text_field :diet, autofocus: true %>
+  </div>
+
+
+  <div class="field">
+    <%= f.label 'Age' %><br />
+    <%= f.number_field :age, autofocus: true %>
+  </div>
+
+  <div class="field">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true %>
   </div>

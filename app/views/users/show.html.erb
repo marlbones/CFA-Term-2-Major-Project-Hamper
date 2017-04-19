@@ -2,6 +2,11 @@
 <h3>User Info</h3>
 <p><%= @user.username %></p>
 <p><%= @user.email %></p>
+<p><%= @user.about %></p>
+<p><%= @user.interests %></p>
+<p><%= @user.age %></p>
+<p><%= @user.favs %></p>
+<p><%= @user.diet %></p>
 <%= link_to 'Message me!', conversations_path(sender_id: current_user.id, recipient_id: @user.id), method: 'post'%>
 
 <!-- Refers to method in users_helper. Only makes link appear for current_user -->
