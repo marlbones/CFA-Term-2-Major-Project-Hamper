@@ -12,6 +12,9 @@ class Product < ApplicationRecord
   geocoded_by :location
   after_validation :geocode
 
+  mount_uploaders :images, ProductUploader
+  serialize :images, JSON
+
   def self.search(search)
     where("title LIKE ?", "%#{search}%")
     where("contents LIKE ?", "%#{search}%")
