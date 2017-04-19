@@ -38,7 +38,7 @@ gem 'coffee-rails', '~> 4.2'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
-# Jquery turbo-links
+# Jquery turbo-links helps make ratyrate work
 gem 'jquery-turbolinks'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
