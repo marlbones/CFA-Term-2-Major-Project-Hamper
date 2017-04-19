@@ -10,6 +10,8 @@ class User < ApplicationRecord
   has_many :requests
   has_many :reviews
 
+  mount_uploader :avatar, UserUploader
+
   def assign_default_role
   self.add_role(:member) if self.roles.blank?
   end
