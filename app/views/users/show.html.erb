@@ -9,6 +9,9 @@
 <p><%= @user.diet %></p>
 <%= link_to 'Message me!', conversations_path(sender_id: current_user.id, recipient_id: @user.id), method: 'post'%>
 <br>
+Selling  : <%= rating_for @user, 'selling', star: 5, disable_after_rate: true %>
+Buying : <%= rating_for @user, 'buying', star: 5, disable_after_rate: true %>
+<br>
 <%= link_to 'Make a review', new_review_path %>
 <br>
 <% if correct_user?(@user) %>
@@ -28,8 +31,6 @@
 
 
 <!-- Refers to method in users_helper. Only makes link appear for current_user -->
-
-
 <% if correct_user?(@user) %>
   <h3>Hampers you've requested</h3>
   <% @requests.each do |request| %>

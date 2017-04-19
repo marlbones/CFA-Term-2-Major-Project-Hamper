@@ -11,12 +11,15 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery.turbolinks
 //= require jquery_ujs
-//= require turbolinks
 //= require_tree .
 //= require materialize-sprockets
 //= require underscore
 //= require gmaps/google
+//= require jquery.raty
+//= require ratyrate
+//= require turbolinks
 
 // This code makes f.select :collection work in products/_form
 $(document).ready(function() {
