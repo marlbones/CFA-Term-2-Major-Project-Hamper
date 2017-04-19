@@ -22,9 +22,8 @@
   </div>
 
   <div class="field">
-
-    <%= f.label :collection %>
     <%= f.select :collection, options_for_select([["Select One", ""], "Delivery", "Pickup", "Delivery or Pickup"]), class: 'browser-default' %>
+    <%= f.label :collection %>
   </div>
 
   <div class="field">
