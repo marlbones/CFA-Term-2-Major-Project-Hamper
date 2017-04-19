@@ -10,9 +10,6 @@ class User < ApplicationRecord
   has_many :requests
   has_many :reviews
 
-  geocoded_by :location
-  after_validation :geocode
-
   def assign_default_role
   self.add_role(:member) if self.roles.blank?
   end
