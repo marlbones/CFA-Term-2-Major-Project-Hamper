@@ -12,9 +12,11 @@ gem 'devise'
 gem 'materialize-sass'
 # Rolify for authentication
 gem "rolify"
+# Geocoder and Gmaps for display of where Items arae
 gem 'geocoder'
 gem 'gmaps4rails'
-
+# Pundit for Auth
+gem "pundit"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.2'
