@@ -26,8 +26,8 @@ class ProductsController < ApplicationController
 
     # Google maps marker function
     @hash = Gmaps4rails.build_markers(@products) do |product, marker|
-      marker.lat product.user.latitude
-      marker.lng product.user.longitude
+      marker.lat product.latitude
+      marker.lng product.longitude
       marker.infowindow product.title
     end
   end
@@ -51,6 +51,7 @@ class ProductsController < ApplicationController
   def create
     @product = Product.new(product_params)
     @product.user_id = current_user.id
+    @product.location = current_user.location
 
     respond_to do |format|
       if @product.save

@@ -9,6 +9,8 @@ class Product < ApplicationRecord
   validates :description, presence: true
   validates :cost, presence: true
 
+  geocoded_by :location
+  after_validation :geocode
 
   def self.search(search)
     where("title LIKE ?", "%#{search}%")
