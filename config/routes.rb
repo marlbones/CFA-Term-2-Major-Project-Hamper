@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-
+  
   resources :requests do
     member do
       post :accept
@@ -13,9 +13,14 @@ Rails.application.routes.draw do
     resources :messages
  end
 
-  devise_for :users, :controllers => { registrations: 'registrations' }
   # :controllers allocates custom made registration to devise
-  resources :users, only: [:show]
+  devise_for :users, :controllers => { registrations: 'registrations' }
+
+  resources :users do
+    member do
+      resources :reviews
+    end
+  end
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

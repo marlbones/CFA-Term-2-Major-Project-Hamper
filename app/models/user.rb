@@ -6,6 +6,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
   has_many :products
   has_many :requests
+  has_many :reviews
 
   geocoded_by :location
   after_validation :geocode
@@ -17,5 +18,5 @@ class User < ApplicationRecord
   def admin?
     has_role?(:admin)
   end
-  
+
 end
