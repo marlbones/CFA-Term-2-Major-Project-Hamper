@@ -17,6 +17,8 @@ gem "rolify"
 # Geocoder and Gmaps for display of where Items arae
 gem 'geocoder'
 gem 'gmaps4rails'
+# For rating the User
+gem 'ratyrate'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -36,6 +38,8 @@ gem 'coffee-rails', '~> 4.2'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
+# Jquery turbo-links
+gem 'jquery-turbolinks'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
