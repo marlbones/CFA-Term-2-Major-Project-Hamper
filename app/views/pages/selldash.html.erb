@@ -47,7 +47,7 @@
 <% @requests.each do |request| %>
   <% if correct_request?(request) %>
   <!-- Create another helper for below request approved check -->
-    <% if request.approved = nil %>
+    <% if request.approved = nil %> <!-- issue with this. seems to make nothing appear -->
       <%= request.product.title %> |
       <%= request.product.user.username %> |
       <%= request.message %> |

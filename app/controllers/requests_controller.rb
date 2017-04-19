@@ -10,7 +10,7 @@ class RequestsController < ApplicationController
   def accept
     @request = Request.find(params[:id])
     @request.accept
-    link_to conversations_path
+    redirect_to conversations_path
   end
 
   def reject
