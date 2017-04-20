@@ -42,8 +42,8 @@ class RequestsController < ApplicationController
 
     respond_to do |format|
       if @request.save
-        format.html { redirect_to @request, notice: 'Request was successfully created.' }
-        format.json { render :show, status: :created, location: @request }
+        format.html { redirect_to products_path, notice: 'Request was successfully made.' }
+        format.json { render :show, status: :created, location: products_path }
       else
         format.html { render :new }
         format.json { render json: @request.errors, status: :unprocessable_entity }

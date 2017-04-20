@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :badges
   get 'contact', to: "contact#index"
   post 'contact', to: "contact#mail"
 
