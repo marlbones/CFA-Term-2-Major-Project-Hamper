@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+  get 'contact', to: "contact#index"
+  post 'contact', to: "contact#mail"
+
   post '/rate' => 'rater#create', :as => 'rate'
   resources :requests do
     member do

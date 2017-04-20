@@ -12,6 +12,7 @@
           <li><a href="/pages/selldash">Sell</a></li>
           <li><%= link_to "Profile", current_user %></li>
           <li><a href="/conversations">Inbox</a></li>
+          <li><a href="/contact">Contact Us</a></li>
         <% else %>
           <li>
             <%= link_to('Login', new_user_session_path)  %>
@@ -27,6 +28,7 @@
           <li><a href="/pages/selldash">Sell</a></li>
           <li><a href="">Profile</a></li>
           <li><a href="/conversations">Inbox</a></li>
+          <li><a href="/contact">Contact Us</a></li>
         <% else %>
           <li>
             <%= link_to('Login', new_user_session_path)  %>
