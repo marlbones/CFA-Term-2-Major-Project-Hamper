@@ -16,6 +16,10 @@ Buying : <%= rating_for @user, 'buying', star: 5, disable_after_rate: true %>
 <br>
 <%= link_to 'Make a review', new_review_path %>
 <br>
+<%@badges.each do |badge| %>
+<%= badge.name %>
+<% end %>
+<br>
 <% if correct_user?(@user) %>
   <%= link_to 'Edit', edit_user_registration_path %>
 <% end %>

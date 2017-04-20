@@ -9,6 +9,7 @@ class User < ApplicationRecord
   has_many :products
   has_many :requests
   has_many :reviews
+  has_many :badges
 
   mount_uploader :avatar, UserUploader
 
