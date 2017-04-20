@@ -14,11 +14,13 @@ gem "pundit"
 gem 'materialize-sass'
 # Rolify for authentication
 gem "rolify"
-# Geocoder and Gmaps for display of where Items arae
+# Geocoder and Gmaps for display of where Products are located
 gem 'geocoder'
 gem 'gmaps4rails'
 # For rating the User
 gem 'ratyrate'
+# Carrierwave for uploading images (user avatar and product images)
+gem 'carrierwave', '~> 1.0'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

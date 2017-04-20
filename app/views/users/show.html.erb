@@ -7,6 +7,8 @@
 <p><%= @user.age %></p>
 <p><%= @user.favs %></p>
 <p><%= @user.diet %></p>
+<img src="<%= @user.avatar.url %>">
+
 <%= link_to 'Message me!', conversations_path(sender_id: current_user.id, recipient_id: @user.id), method: 'post'%>
 <br>
 Selling  : <%= rating_for @user, 'selling', star: 5, disable_after_rate: true %>

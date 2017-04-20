@@ -10,12 +10,13 @@ class RequestsController < ApplicationController
   def accept
     @request = Request.find(params[:id])
     @request.accept
-    link_to conversations_path
+    redirect_to pages_accepted_path(sender_id: current_user.id, recipient_id: @request.user.id)
   end
 
   def reject
     @request = Request.find(params[:id])
     @request.reject
+    @request.destroy
     redirect_to pages_selldash_path
   end
 
