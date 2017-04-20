@@ -1,6 +1,6 @@
 class Request < ApplicationRecord
   belongs_to :user
-  belongs_to :product, :dependent => :delete
+  belongs_to :product
 
   def accept
     self.approved = true
