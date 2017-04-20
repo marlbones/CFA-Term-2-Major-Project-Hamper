@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  
+
   post '/rate' => 'rater#create', :as => 'rate'
   resources :requests do
     member do
@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   resources :products
   root 'products#index'
   get 'pages/selldash'
+  get 'pages/accepted'
   resources :conversations do
     resources :messages
  end
