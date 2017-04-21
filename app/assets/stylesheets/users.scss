@@ -6,18 +6,32 @@
     align-items: center;
   }
 
-  .top-heading  {
-    margin-top: 20%;
+  .login-top {
+    height: 50vh;
+    background-image: url(asset-path('tealpattern.jpg'));
   }
 
+  .top-heading  {
+    margin-top: 10%;
+    margin-bottom: 10%;
+  }
+
+  .top-heading-sign {
+    margin-top: 20%;
+    margin-bottom: 10%;
+  }
+
+
   .form-wrapper {
-    margin-top: 40%;
+    margin-top: -40%;
     padding-bottom: 10%;
     padding-top: 10%;
+    background-color: white;
   }
 
   .empty-space {
-    // height: 50vh;
+    height: 40vh;
+
   }
 
   .form-text {
@@ -28,3 +42,15 @@
     margin-top: 10%;
     font-size: 1em;
   }
+
+
+ //  @media #{$medium-and-up} {
+ //  .login-top {
+ //    background-color: red !important;
+ //  }
+ //
+ //  .top-heading  {
+ //    margin-top: 10%;
+ //    margin-bottom: 10%;
+ //  }
+ // }
