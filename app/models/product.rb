@@ -1,5 +1,5 @@
 class Product < ApplicationRecord
-  belongs_to :user, :dependent => :delete
+  belongs_to :user
   has_many :requests
 
   validates :title, presence: true
