@@ -1,3 +1,24 @@
 // Place all the styles related to the Products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.intro-card {
+  padding: 15% 5% 15% 5%;
+  font-size: 1.5em;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.icon-size-md {
+  font-size: 36px;
+}
+
+.icon-size-sm {
+  font-size: 26px;
+}
+
+.smaller-text {
+  font-size: 1em;
+}

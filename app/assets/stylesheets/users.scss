@@ -44,13 +44,27 @@
   }
 
 
- //  @media #{$medium-and-up} {
- //  .login-top {
- //    background-color: red !important;
- //  }
- //
- //  .top-heading  {
- //    margin-top: 10%;
- //    margin-bottom: 10%;
- //  }
- // }
+  // @media only screen and (min-width : 601px) {
+  @media #{$medium-and-up} {
+
+  .top-heading  {
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+
+  .form-wrapper {
+    margin-top: -8%;
+    padding-bottom: 10%;
+    padding-top: 10%;
+    background-color: white;
+  }
+
+  .bottom-links {
+    margin-top: 0%;
+  }
+
+  .top-heading-sign {
+    margin-top: 5%;
+    margin-bottom: 0%;
+  }
+ }
