@@ -2,9 +2,12 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
 .intro-card {
   padding: 15% 5% 15% 5%;
   font-size: 1.5em;
+  align-items: center;
+  text-align: center;
 }
 
 .bold {
@@ -21,4 +24,13 @@
 
 .smaller-text {
   font-size: 1em;
+}
+
+.resize-img {
+  height: 400px;
+  filter: grayscale(30%)
+}
+
+.card-image {
+  height: 400px;
 }

@@ -11,8 +11,8 @@
 
 <%= link_to 'Message me!', conversations_path(sender_id: current_user.id, recipient_id: @user.id), method: 'post'%>
 <br>
-Selling  : <%= rating_for @user, 'selling', star: 5, disable_after_rate: true %>
-Buying : <%= rating_for @user, 'buying', star: 5, disable_after_rate: true %>
+Selling  : <%= rating_for @user, 'selling', star: 5, disable_after_rate: true, enable_half: true, half_show: true%>
+Buying : <%= rating_for @user, 'buying', star: 5, disable_after_rate: true, enable_half: true, half_show: true %>
 <br>
 <%= link_to 'Make a review', new_review_path %>
 <br>
