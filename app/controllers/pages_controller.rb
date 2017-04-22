@@ -11,5 +11,10 @@ class PagesController < ApplicationController
 
   def admindash
     authorize self
+    @products = Product.all
+    @users = User.all
+    @requests = Request.all
+    @badges = Badge.all
+    @reviews = Review.all
   end
 end
