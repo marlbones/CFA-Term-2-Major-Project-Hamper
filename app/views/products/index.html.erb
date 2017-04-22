@@ -27,6 +27,7 @@
       <%= link_to "contents", products_path(order: 'contents'), 'data-no-turbolink' => true %> <!-- temporary. change for user.location -->
     </p>
     <hr>
+    <%= will_paginate @products %>
   </div>
 
 
