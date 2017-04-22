@@ -42,7 +42,7 @@
                     </div>
                     <div class= "col s6">
                       <p><%= product.title %></p>
-                      <p><%= link_to product.user.username, product.user %> <%= rating_for product.user, 'selling'%></p>
+                      <p><%= link_to product.user.username, product.user %> <%= rating_for product.user, 'selling', { readonly: true}%></p>
                     </div>
                     <div class= "col s3">
                       <p><%= number_to_currency(product.cost) %></p>
