@@ -23,6 +23,8 @@ gem 'ratyrate'
 gem 'carrierwave', '~> 1.0'
 # simple form for mailer style
 gem 'simple_form'
+# paginate for products pages
+gem 'will_paginate', '~> 3.1.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.2'
