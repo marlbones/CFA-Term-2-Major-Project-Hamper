@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   root 'products#index'
   get 'pages/selldash'
   get 'pages/accepted'
+  get 'pages/admindash'
   resources :conversations do
     resources :messages
  end
