@@ -12,11 +12,4 @@ class ApplicationController < ActionController::Base
     redirect_to(request.referrer || root_path)
   end
 
-  def status
-    @user = current_user
-      if @user.products.count == 5 && @user.badges(name: "Super Producer").blank?
-        Badge.create(user_id: current_user.id, name: "Super Producer")
-      end
-  end
-
 end

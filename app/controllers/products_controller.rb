@@ -62,6 +62,10 @@ class ProductsController < ApplicationController
         format.json { render json: @product.errors, status: :unprocessable_entity }
       end
     end
+
+    if current_user.products.count == 5 && current_user.badges(name: "Super Producer").blank?
+      Badge.create(user_id: current_user.id, name: "Super Producer")
+    end
   end
 
   # PATCH/PUT /products/1

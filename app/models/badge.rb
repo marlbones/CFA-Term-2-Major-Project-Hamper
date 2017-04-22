@@ -1,3 +1,3 @@
 class Badge < ApplicationRecord
-  belongs_to :user, :dependent => :delete
+  belongs_to :user
 end
