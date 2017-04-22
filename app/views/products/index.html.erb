@@ -31,6 +31,7 @@
 
 
       <% @products.each do |product| %>
+        <% if product.purchased == false%>
           <div class="row">
             <div class="col s12 m7">
               <div class="card">
@@ -60,6 +61,8 @@
               </div>
             </div>
           </div>
+          <% else %>
+        <% end %>
       <% end %>
 
 

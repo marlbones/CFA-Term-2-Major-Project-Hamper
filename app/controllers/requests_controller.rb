@@ -10,6 +10,8 @@ class RequestsController < ApplicationController
   def accept
     @request = Request.find(params[:id])
     @request.accept
+    @request.product.purchased = true
+    @request.product.save
     redirect_to pages_accepted_path(sender_id: current_user.id, recipient_id: @request.user.id)
   end
 
