@@ -66,6 +66,10 @@ class ProductsController < ApplicationController
     if current_user.products.count == 5 && current_user.badges(name: "Super Producer").blank?
       Badge.create(user_id: current_user.id, name: "Super Producer")
     end
+
+    if current_user.products.where(perishables: true).count == 5 && current_user.badges(name: "Green Thumb").blank?
+      Badge.create(user_id: current_user.id, name: "Green Thumb")
+    end
   end
 
   # PATCH/PUT /products/1
