@@ -1,3 +1,4 @@
+
 <!-- Script required for Google Maps API -->
 <script src="//maps.google.com/maps/api/js?key="ENV['GMAPS_API']""></script>
 <script src="//cdn.rawgit.com/mahnunchik/markerclustererplus/master/dist/markerclusterer.min.js"></script>
@@ -21,9 +22,9 @@
       </div> <!-- col end  -->
     </div> <!-- row end  -->
     <p>Sort by:
-      <%= link_to "Created at", products_path(order: 'created_at') %>,
-      <%= link_to "cost", products_path(order: 'cost') %>,
-      <%= link_to "contents", products_path(order: 'contents') %> <!-- temporary. change for user.location -->
+      <%= link_to "Created at", products_path(order: 'created_at'), 'data-no-turbolink' => true %>,
+      <%= link_to "cost", products_path(order: 'cost'), 'data-no-turbolink' => true %>,
+      <%= link_to "contents", products_path(order: 'contents'), 'data-no-turbolink' => true %> <!-- temporary. change for user.location -->
     </p>
     <hr>
   </div>
