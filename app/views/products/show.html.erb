@@ -11,6 +11,11 @@
 </p>
 
 <p>
+  <strong>Created:</strong>
+  <%= @product.created_at %>
+</p>
+
+<p>
   <strong>Cost:</strong>
   <%= @product.cost %>
 </p>
@@ -47,6 +52,11 @@
 
 <% @product.images.each do |image| %>
   <img src="<%= image.url %>">
+<% end %>
+
+<% if @product.created_at < 1.day.ago%>
+  <p>TEST!</p>
+<% else %>
 <% end %>
 
 <%= link_to "Request Hamper", new_request_path(product_id: @product.id)%> |

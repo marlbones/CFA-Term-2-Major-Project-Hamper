@@ -3,7 +3,11 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .product-all {
-background: #F5F3F7;
+  background: #F5F3F7;
+}
+
+.top-background {
+  background-image: url(asset-path('tealpattern.jpg'));
 }
 
 .intro-card {
