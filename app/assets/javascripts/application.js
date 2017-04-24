@@ -10,6 +10,7 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require gmaps/google
 //= require jquery
 //= require jquery.turbolinks
 //= require jquery_ujs
@@ -17,7 +18,6 @@
 //= require materialize-sprockets
 //= require materialize
 //= require underscore
-//= require gmaps/google
 //= require jquery.raty
 //= require ratyrate
 //= require turbolinks
