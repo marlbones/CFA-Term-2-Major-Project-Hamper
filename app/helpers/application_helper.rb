@@ -7,4 +7,7 @@ module ApplicationHelper
     request.product.user.username == current_user.username
   end
 
+  def correct_user?(user)
+    user == current_user
+  end
 end
