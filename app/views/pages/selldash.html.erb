@@ -45,7 +45,7 @@
 
 <h4>Requested items:</h4>
 <% @requests.each do |request| %>
-  <% if correct_request?(request) %>
+  <% if correct_request?(request) && request.approved != true %>
   <!-- Create another helper for below request approved check -->
 
       "<%= request.product.title %>" belongs to

@@ -1,1 +1,21 @@
-<%= link_to 'Message USER', conversations_path(sender_id: params[:recipient_id], recipient_id: params[:sender_id]), method: 'post'%>
+<div class= "container">
+  <h4>Congratulations! You've made a Hamper deal!</h4>
+  <br>
+
+  <h5>Message the lucky buyer to organise a place and time to make the trade.</h5>
+  <i class= "material-icons icon-size-md">message</i>
+  <i class= "material-icons icon-size-md">place</i>
+  <i class= "material-icons icon-size-md">hourglass_full</i>
+
+  <br>
+  <h5><strong>Remember</strong>, you will be able to rate and review one another, so make sure everyone stays happy!</h5>
+  <i class= "material-icons icon-size-md">mood</i>
+
+  <br>
+  <br>
+  <%= link_to 'Send Message', conversations_path(sender_id: params[:recipient_id], recipient_id: params[:sender_id]), method: 'post', :class => "waves-effect waves-light btn" %>
+</div>
+<br>
+
+<div class= "login-top">
+</div>
