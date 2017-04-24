@@ -1,64 +1,64 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @product.title %>
-</p>
+<div class = "top-background">
+  <div class="carousel carousel-slider" data-indicators="true">
+    <% @product.images.each do |image| %>
+      <a class="carousel-item" href="#one!"><img class= "resize-img" src="<%= image.url %>"></a>
+    <% end %>
+  </div>
+</div>
 
-<p>
-  <strong>User:</strong>
-  <%= @product.user.username %>
-</p>
+<div class = "container">
+  <p id="notice"><%= notice %></p>
+  <div class= "row">
+    <div class= "col s6">
+      <h4><%= @product.title %></h4>
+    </div>
+    <div class= "col s3">
+      <% if correct_user?(@product.user) %>
+        <%= link_to 'Edit', edit_product_path(@product), :class => "waves-effect waves-light btn" %>
+      <% else %>
+      <% end %>
+    </div>
+    <div class= "col s3">
+      <% if correct_user?(@product.user) && @product.created_at < 1.day.ago %>
+        <%= link_to 'Give', edit_product_path(@product), :class => "waves-effect waves-purple btn" %>
+      <% else %>
+      <% end %>
+    </div>
+  </div>
+  <div class= "row">
+    <div class = "col s6">
+      <p> <i class= "material-icons">person</i> <%= link_to @product.user.username, @product.user %> </p>
+      <p> <i class= "material-icons">hourglass_full</i> <%= @product.created_at %> </p>
+      <p> <i class= "material-icons">local_offer</i> <%= number_to_currency(@product.cost) %> </p>
+      <p> <i class= "material-icons">place</i> <%= @product.user.location %> </p>
+    </div>
+    <div class = "col s6">
+      <p> <i class= "material-icons">shopping_cart</i> <%= @product.collection %> </p>
+      <p> <i class= "material-icons">restaurant</i> Perishables: <%= @product.perishables %> </p>
+      <p> <i class= "material-icons">restaurant_menu</i> Non-Perishables: <%= @product.non_perishables %> </p>
+      <p> <i class= "material-icons">shopping_basket</i> Quantity: <%= @product.items %> </p>
+    </div>
+  </div>
+  <hr>
+  <div class = "row">
+    <div class= "col s12">
+      <h5>Contents</h5>
+      <%= @product.contents %>
+      <h5>Description</h5>
+      <%= @product.description %>
+    </div>
+  </div>
 
-<p>
-  <strong>Created:</strong>
-  <%= @product.created_at %>
-</p>
 
-<p>
-  <strong>Cost:</strong>
-  <%= @product.cost %>
-</p>
+  <% if @product.created_at < 1.day.ago%>
+    <p>TEST!</p>
+  <% else %>
+  <% end %>
 
-<p>
-  <strong>Collection:</strong>
-  <%= @product.collection %>
-</p>
-
-<p>
-  <strong>Items:</strong>
-  <%= @product.items %>
-</p>
-
-<p>
-  <strong>Contents:</strong>
-  <%= @product.contents %>
-</p>
-
-<p>
-  <strong>Perishables:</strong>
-  <%= @product.perishables %>
-</p>
-
-<p>
-  <strong>Non perishables:</strong>
-  <%= @product.non_perishables %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @product.description %>
-</p>
-
-<% @product.images.each do |image| %>
-  <img src="<%= image.url %>">
-<% end %>
-
-<% if @product.created_at < 1.day.ago%>
-  <p>TEST!</p>
-<% else %>
-<% end %>
-
-<%= link_to "Request Hamper", new_request_path(product_id: @product.id)%> |
-<%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %>
+  <div class= "row">
+    <div class= "col s6">
+    <%= link_to "Request Hamper", new_request_path(product_id: @product.id), :class => "waves-effect waves-light btn"%>
+    </div>
+  </div>
+</div>
