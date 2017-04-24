@@ -1,7 +1,5 @@
 
 <!-- Script required for Google Maps API -->
-
-
 <div class= "product-all">
   <div class = "top-background">
     <div class ="container">
@@ -21,19 +19,26 @@
       </div> <!-- row end  -->
     </div>
   </div>
+  <div class = "container">
     <%= form_tag products_path, :method => 'get' do %>
       <p>
         <%= text_field_tag :search, params[:search] %>
-        <%= submit_tag "Search", :name => nil %>
+        <%= submit_tag "Search", :name => nil, :class => "btn waves-effect waves-light" %>
       </p>
     <% end %>
+    <br>
+
     <!-- Sorts by filters. passes in order: string as params that activates if statements in controller  -->
-    <p>Sort by:
-      <%= link_to "Created at", products_path(order: 'created_at'), 'data-no-turbolink' => true %>,
-      <%= link_to "cost", products_path(order: 'cost'), 'data-no-turbolink' => true %>,
-      <%= link_to "contents", products_path(order: 'contents'), 'data-no-turbolink' => true %> <!-- temporary. change for user.location -->
-    </p>
-    <!-- <hr> -->
+    <!-- Dropdown Trigger -->
+    <a class='dropdown-button btn' href='#' data-activates='dropdown1'>Sort by</a>
+    <!-- Dropdown Structure -->
+    <ul id='dropdown1' class='dropdown-content'>
+      <li><%= link_to "Created at", products_path(order: 'created_at'), 'data-no-turbolink' => true %></li>
+      <li><%= link_to "Cost", products_path(order: 'cost'), 'data-no-turbolink' => true %></li>
+      <li><%= link_to "Content", products_path(order: 'contents'), 'data-no-turbolink' => true %></li>
+    </ul>
+    <br>
+  </div>
 
 
 
