@@ -16,7 +16,7 @@ class Product < ApplicationRecord
   serialize :images, JSON
 
   def self.search(search)
-    where("title LIKE ?", "%#{search}%")
+    # where("title contents LIKE ? OR contents LIKE ?", "%#{search}%", "%#{search}%")
     where("contents LIKE ?", "%#{search}%")
   end
 end
