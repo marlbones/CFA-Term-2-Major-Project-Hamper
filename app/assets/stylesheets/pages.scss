@@ -4,4 +4,10 @@
 
 .create-button {
   margin-right: 20%;
+  opacity: 0.5;
+  transition: .50s ease-in-out;
+}
+
+.create-button:hover {
+  opacity: 1;
 }

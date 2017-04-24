@@ -8,7 +8,7 @@
     </div>
     <div class= "col s8">
       <p><%= link_to @request.user.username, @request.user %> <%= rating_for @request.user, 'buying', { readonly: true}%></p>
-      <p class= "bold">"<%= @request.message %>"</p>
+      <p class= "bold request-message">"<%= @request.message %>"</p>
     </div>
   </div>
 
