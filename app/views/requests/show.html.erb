@@ -1,3 +1,4 @@
+
 <div class= "container">
   <p id="notice"><%= notice %></p>
 
@@ -10,6 +11,7 @@
       <p class= "bold">"<%= @request.message %>"</p>
     </div>
   </div>
+
 
   <div class="row">
     <div class="col s12 m7">
@@ -26,8 +28,14 @@
   </div>
 
   <% if correct_request?(@request)%>
-    <%= link_to "Accept this request", accept_request_path(@request), method: :post %>
-    <%= link_to "Reject this request", reject_request_path(@request), method: :post %>
+  <div class= "row">
+    <div class= "col s6">
+      <%= link_to "Accept Request", accept_request_path(@request), method: :post, :class => "waves-effect waves-light btn" %>
+    </div>
+    <div class= "col s6">
+      <%= link_to "Reject Request", reject_request_path(@request), method: :post, :class => "waves-effect waves-light btn" %>
+    </div>
+  </div>
   <% else %>
   <% end %>
 </div>
