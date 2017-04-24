@@ -1,60 +1,45 @@
-<h1>Yo. These are what you're selling</h1>
+<div class="container">
+  <h4>Hampers you've listed</h4>
+</div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>User</th>
-      <th>Location</th>
-      <th>Cost</th>
-      <th>Collection</th>
-      <th>Items</th>
-      <th>Contents</th>
-      <th>Perishables</th>
-      <th>Non perishables</th>
-      <th>Description</th>
-      <th>blah</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @products.each do |product| %>
-      <tr>
-        <td><%= product.title %></td>
-        <td><%= link_to product.user.username, product.user %></td>
-        <td><%= product.user.location %></td>
-        <td><%= number_to_currency(product.cost) %></td>
-        <td><%= product.collection %></td>
-        <td><%= product.items %></td>
-        <td><%= product.contents %></td>
-        <td><%= true_false(product.perishables) %></td>
-        <td><%= true_false(product.non_perishables) %></td>
-        <td><%= product.description %></td>
-        <td><%= link_to 'Show', product %></td>
-        <td><%= link_to 'Edit', edit_product_path(product) %></td>
-        <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-<br>
-<%= link_to 'Create New Hamper', new_product_path %>
-
-<br>
-
-<h4>Requested items:</h4>
-<% @requests.each do |request| %>
-  <% if correct_request?(request) && request.approved != true %>
-  <!-- Create another helper for below request approved check -->
-
-      "<%= request.product.title %>" belongs to
-      <%= request.product.user.username %>|
-      "<%= request.message %>" from
-      <%= request.user.username %> |
-      <%= link_to 'Show', request %>
-      <br>
-
+<% @products.each do |product| %>
+  <% if product.purchased == false%>
+    <div class="row">
+      <div class="col s12 m7">
+        <div class="card">
+          <div class="card-image">
+            <img class= "resize-img" src="<%= product.images[0].url %>">
+          </div>
+          <div class="card-content">
+            <p><strong><%= product.title %></%></strong></p>
+            <p><%= product.contents %></p>
+          </div>
+        </div>
+      </div>
+    </div>
   <% else %>
   <% end %>
 <% end %>
+
+<div class= "fixed-action-btn horizontal click-to-toggle create-button">
+  <%= link_to '+ Create New Hamper', new_product_path, :class => 'waves-effect waves-light btn' %>
+</div>
+<br>
+
+<div class= "container">
+  <h4>Requested items:</h4>
+  <% @requests.each do |request| %>
+    <% if correct_request?(request) && request.approved != true %>
+    <!-- Create another helper for below request approved check -->
+
+        "<%= request.product.title %>" belongs to
+        <%= request.product.user.username %>|
+        "<%= request.message %>" from
+        <%= request.user.username %> |
+        <%= link_to 'Show', request %>
+        <br>
+
+    <% else %>
+    <% end %>
+  <% end %>
+</div>
