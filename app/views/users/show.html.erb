@@ -1,15 +1,45 @@
-<h1>Profile</h1>
-<h3>User Info</h3>
-<p><%= @user.username %></p>
-<p><%= @user.email %></p>
+<div class= "container">
+  <div class= "card top-profile-wrapper">
+    <div class= "row">
+      <div class= "col s4">
+        <img src="<%= @user.avatar.url %>" alt="" class="circle responsive-img">
+      </div>
+      <div class= "col s4">
+        <p class= "bigger-text profile-text-margin"><%= @user.first_name %></p>
+        <p class= "profile-text-margin"><%= @user.username %></p>
+        <p class= "smaller-text">Joined <%= @user.created_at %></p>
+      </div>
+      <div class= "col s4">
+        <%= link_to 'Msg', conversations_path(sender_id: current_user.id, recipient_id: @user.id), method: 'post', class: 'waves-effect waves-light btn profile-msg'%>
+      </div>
+    </div>
+    <div class= "row">
+      <div class= "col s4">
+      </div>
+      <div class= "col s8 badges-display">
+        <%@badges.each do |badge| %>
+        <img src="<%= asset_path 'fb2.png' %>" alt="" title="<%= badge.name %>">
+        <img src="<%= asset_path 'download.png' %>" alt="" title="Green Thumb">
+        <% end %>
+      </div>
+    </div>
+  </div>
+
+  <div class= "card review-profile-wrapper">
+    <div class= "row">
+
+    </div>
+  </div>
+
+</div>
+
 <p><%= @user.about %></p>
 <p><%= @user.interests %></p>
 <p><%= @user.age %></p>
 <p><%= @user.favs %></p>
 <p><%= @user.diet %></p>
-<img src="<%= @user.avatar.url %>">
+<!-- <img src="<%= @user.avatar.url %>"> -->
 
-<%= link_to 'Message me!', conversations_path(sender_id: current_user.id, recipient_id: @user.id), method: 'post'%>
 <br>
 Selling  : <%= rating_for @user, 'selling', star: 5, disable_after_rate: true, enable_half: true, half_show: true%>
 Buying : <%= rating_for @user, 'buying', star: 5, disable_after_rate: true, enable_half: true, half_show: true %>
