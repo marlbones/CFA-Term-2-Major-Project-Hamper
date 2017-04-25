@@ -1,3 +1,4 @@
+<div>
 <%= form_for(product) do |f| %>
   <% if product.errors.any? %>
     <div id="error_explanation">
@@ -23,7 +24,6 @@
 
   <div class="field">
     <%= f.select :collection, options_for_select([["Select One", ""], "Delivery", "Pickup", "Delivery or Pickup"]), class: 'browser-default' %>
-    <%= f.label :collection %>
   </div>
 
   <div class="field">
@@ -33,7 +33,7 @@
 
   <div class="field">
     <%= f.label :contents %>
-    <%= f.text_area :contents %>
+    <%= f.text_area :contents, :class => "materialize-textarea" %>
   </div>
 
   <div class="field">
@@ -45,18 +45,22 @@
     <%= f.check_box :non_perishables %>
     <%= f.label :non_perishables %>
   </div>
+  <br>
 
   <div class="field">
     <%= f.label :description %>
-    <%= f.text_area :description %>
+    <%= f.text_area :description, :class => "materialize-textarea" %>
   </div>
 
   <div class="field">
     <%= f.label :images %>
+    <br>
     <%= f.file_field :images, multiple: true %>
   </div>
+  <br>
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit 'Create', :class => "waves-effect waves-light btn" %>
   </div>
 <% end %>
+</div>
