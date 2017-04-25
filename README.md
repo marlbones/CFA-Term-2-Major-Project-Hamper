@@ -83,6 +83,11 @@ Design Journey
 -------------
 The project was designed to be a mobile-first product, with accessibility at the forefront of this decision. In regards to the UI, again accessibility was used to guide practice, thus decisions on simplicity, colour and size of font were made very early on. A lot of inspiration for design was pulled from the "Carousell" platform.
 
+#### Accessibility
+Accessibility was at the forefront of the design process and influenced CSS framework choice (materialize), mobile-first display, and layout. UK Home Office accessibility design do/do-nots guided me at times.
+![accessibility](http://res.cloudinary.com/dabq7kxo6/image/upload/v1493122721/Screen_Shot_2017-04-25_at_4.22.00_pm_m4yftc.png)
+[Posters](https://github.com/UKHomeOffice/posters)
+
 #### User stories
 Used Trello to build user stories and manage project tasks/agile developement (see image below). Features were categorised as "sprinkles" or "donuts" (donuts required for MVP)
 ![user-stories](http://res.cloudinary.com/dabq7kxo6/image/upload/v1493100321/Screen_Shot_2017-04-25_at_4.03.47_pm_gzbyxa.png)
