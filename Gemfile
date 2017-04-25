@@ -21,6 +21,8 @@ gem 'gmaps4rails'
 gem 'ratyrate'
 # Carrierwave for uploading images (user avatar and product images)
 gem 'carrierwave', '~> 1.0'
+# Fog for additional image uploading on heroku
+gem 'fog'
 # simple form for mailer style
 gem 'simple_form'
 # paginate for products pages
