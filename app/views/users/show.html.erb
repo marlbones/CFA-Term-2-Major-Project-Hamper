@@ -10,7 +10,11 @@
         <p class= "smaller-text">Joined <%= @user.created_at %></p>
       </div>
       <div class= "col s4">
+        <% if correct_user?(@user) %>
+          <%= link_to 'Edit', edit_user_registration_path, class:'waves-effect waves-light btn profile-msg' %>
+        <% else %>
         <%= link_to 'Msg', conversations_path(sender_id: current_user.id, recipient_id: @user.id), method: 'post', class: 'waves-effect waves-light btn profile-msg'%>
+        <% end %>
       </div>
     </div>
     <div class= "row">
@@ -25,49 +29,66 @@
     </div>
   </div>
 
+
   <div class= "card review-profile-wrapper">
     <div class= "row">
-
+      <div class= "col s12">
+        <div class= "rating-wrapper">
+          <p class= "bigger-text"> User Ratings</p>
+          Selling <%= rating_for @user, 'selling', star: 5, disable_after_rate: true, enable_half: true, half_show: true%>
+          Buying <%= rating_for @user, 'buying', star: 5, disable_after_rate: true, enable_half: true, half_show: true %>
+        </div>
+      </div>
     </div>
-  </div>
 
+    <%@reviews.each do |review| %>
+      <div class="card">
+        <div class= "row">
+          <div class= "col s4">
+            <p class= "rating-wrapper"><%= link_to review.user.username, review.user %></p>
+          </div>
+          <div class= "col s8">
+              <p class="bold">"<%= review.body %>"</p>
+          </div>
+        </div>
+      </div>
+    <% end %>
+    <% if correct_user?(@user) %>
+    <% else %>
+      <%= link_to 'Review', new_review_path, class: 'waves-effect waves-light btn' %>
+    <% end %>
+    <br>
+  </div>
 </div>
 
-<p><%= @user.about %></p>
-<p><%= @user.interests %></p>
-<p><%= @user.age %></p>
-<p><%= @user.favs %></p>
-<p><%= @user.diet %></p>
-<!-- <img src="<%= @user.avatar.url %>"> -->
-
-<br>
-Selling  : <%= rating_for @user, 'selling', star: 5, disable_after_rate: true, enable_half: true, half_show: true%>
-Buying : <%= rating_for @user, 'buying', star: 5, disable_after_rate: true, enable_half: true, half_show: true %>
-<br>
-<%= link_to 'Make a review', new_review_path %>
-<br>
-<%@badges.each do |badge| %>
-<%= badge.name %>
-<% end %>
-<br>
-<% if correct_user?(@user) %>
-  <%= link_to 'Edit', edit_user_registration_path %>
-<% end %>
-<br>
-
-<%@user.products.each do |product| %>
-<%= product.title %>
-<% end %>
-<br>
-
-<%@reviews.each do |review| %>
-<%= review.title %>
-<%= review.user.username %>
-<% end %>
-
+<div class= "container">
+  <p class= "bigger-text"><%=@user.first_name%>'s Hampers</p>
+  <hr>
+  <% @user.products.each do |product| %>
+    <% if product.purchased == false%>
+      <div class="row">
+        <div class="col s12 m7">
+          <div class="card">
+            <div class="card-image">
+              <img class= "resize-img" src="<%= product.images[0].url %>">
+            </div>
+            <div class="card-content">
+              <p><strong><%= product.title %></%></strong></p>
+              <p><%= product.contents %></p>
+            </div>
+            <div class="card-action">
+              <p><%= link_to 'View', product %></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% else %>
+    <% end %>
+  <% end %>
+</div>
 
 <!-- Refers to method in users_helper. Only makes link appear for current_user -->
-<% if correct_user?(@user) %>
+<!-- <% if correct_user?(@user) %>
   <h3>Hampers you've requested</h3>
   <% @requests.each do |request| %>
     <%= request.product.title %> |
@@ -75,4 +96,4 @@ Buying : <%= rating_for @user, 'buying', star: 5, disable_after_rate: true, enab
     <%= request.message %>
     <br>
   <% end %>
-<% end %>
+<% end %> -->
