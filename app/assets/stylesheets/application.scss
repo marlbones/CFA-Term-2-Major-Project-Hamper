@@ -31,3 +31,7 @@ $medium-only: "only screen and (min-width : #{$small-screen-up}) and (max-width 
 @import 'users';
 
 #sidenav-overlay { z-index: 1; } //Added this as sidenav-overlay not working when 'fixed'
+
+body {
+  background-color: #F5F3F7;
+}

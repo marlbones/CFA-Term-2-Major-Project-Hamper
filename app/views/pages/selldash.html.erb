@@ -1,5 +1,5 @@
 <div class="container">
-  <h4>Hampers you've listed</h4>
+  <p class= "bigger-text">Hampers you've listed</p>
 </div>
 
 <% @products.each do |product| %>
@@ -30,7 +30,7 @@
 <br>
 
 <div class= "container">
-  <h4>Requested items</h4>
+  <p class= "bigger-text">Requested items</p>
   <br>
   <% @requests.each do |request| %>
     <% if correct_request?(request) && request.approved != true %>

@@ -42,6 +42,36 @@
     margin-top: 10%;
     font-size: 1em;
   }
+
+  // Profile page (users/show view)
+  .top-profile-wrapper {
+    margin-top: 10%;
+  }
+
+  .bigger-text {
+    font-size: 1.5em;
+  }
+
+  .profile-text-margin {
+    margin-bottom: -15px;
+  }
+
+  .profile-msg {
+    margin-top: 15%;
+  }
+
+  .smaller-text {
+    font-size: 0.9em;
+    color: #bdbdbd;
+  }
+
+  .badges-display {
+    margin-top: -8%;
+  }
+
+  .rating-wrapper {
+    margin-left: 10px;
+  }
 }
 
   // @media only screen and (min-width : 601px) {
@@ -50,7 +80,7 @@
       height: 50vh;
       background-image: url("http://res.cloudinary.com/dabq7kxo6/image/upload/v1493017597/tealpattern_cwcm6c.jpg");
     }
-    
+
   .top-heading  {
     margin-top: 5%;
     margin-bottom: 5%;
