@@ -6,13 +6,23 @@
       <div class="alert alert-danger"><%= flash[:warning] %></div>
     <% else %>
   <% end %>
+</div>
 
-<h1>Contact Us</h1>
 
-  <%= simple_form_for :contact do |f| %>
-      <%= f.input :email, placeholder: 'type email here' %>
-      <%= f.input :message, placeholder: 'type message here', :as => :text %>
-      <%= f.button :submit, "Send" %>
-  <% end %>
+<div class= "empty-space container">
+  <br>
+  <h4 class= "center">Hi! <i class= "material-icons icon-size-md">mood</i></h4>
+  <p>Hamper is a little app with some big aspirations.</p>
+  <p>We want to see less food wastage and more affordable good stuff!</p>
+  <p>If you have anything to say to us, don't hesitate to drop us a line using the form below!</p>
+</div>
+<div class= "login-top2">
+  <div class= "card contact-card">
+    <%= simple_form_for :contact do |f| %>
+        <%= f.input :email, placeholder: 'type email here' %>
+        <%= f.input :message, placeholder: 'type message here', :as => :text %>
+        <%= f.button :submit, "Send" %>
+    <% end %>
+  </div>
 
 </div>
