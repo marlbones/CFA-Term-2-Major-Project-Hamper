@@ -25,7 +25,7 @@ Each person/group was chosen to represent a particular industry as well as certa
 
 Problem
 -------------
-I chose to build my application for Bill/Melinda gates, focusing on the issue of food insecurity.
+I chose to build my application for Bill/Melinda Gates, focusing on the issue of food insecurity.
 
 #### Problem definition
 There are many reasons why food insecurity exists within the Western-world (access, availability, nutrition, storage, education, etc.). For the purpose of this project, I decided to focus on "affordability" (i.e. the difficulty in accessing quality food due to associated high costs).
