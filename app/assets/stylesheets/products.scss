@@ -63,3 +63,13 @@
   height: 60vh;
   background-image: url("http://res.cloudinary.com/dabq7kxo6/image/upload/v1493017597/tealpattern_cwcm6c.jpg");
 }
+
+  @media #{$medium-and-up} {
+    .intro-card {
+      padding: 5%;
+      font-size: 1.5em;
+      align-items: left;
+      text-align: left;
+      background: #F5F3F7;
+    }
+  }
