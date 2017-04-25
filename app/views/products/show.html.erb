@@ -52,9 +52,12 @@
     </div>
   </div>
 
+<% if correct_user?(@product.user) %>
+<% else %>
   <div class= "row">
     <div class= "col s6">
     <%= link_to "Request Hamper", new_request_path(product_id: @product.id), :class => "waves-effect waves-light btn"%>
     </div>
   </div>
+<% end %>
 </div>
