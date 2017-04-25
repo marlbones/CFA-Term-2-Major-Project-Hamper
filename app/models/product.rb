@@ -7,7 +7,7 @@ class Product < ApplicationRecord
   validates :items, presence: true
   validates :contents, presence: true
   validates :description, presence: true
-  validates :cost, presence: true
+  validates :cost, presence: true, :numericality => {:only_integer => true}
 
   geocoded_by :location
   after_validation :geocode
