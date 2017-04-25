@@ -33,11 +33,10 @@ Broadly speaking, demographics who are food insecure can be placed into one of t
   > Affordability of basic quality goods is a barrier to food security for lower socio-economic, or financially unstable demographics; leading to poorer health and education outcomes;
 
 #### Solution
-
-While a food security problem exists within Australia, so does a food wastage one. My solution to the above problem is to link the food insecure with the food over-consumers. The current real-world solution is donating food goods to charities who then disseminate to people. The problem with this model is that category 2 groupings don't tend to access this model due to stigma associated with accessing charity assistance. My solution aims to remove the charity from the equation and link people directly through my application, "Hamper".
+While a food security problem exists within Australia, so does a food wastage one. My solution is to link the food insecure with the food over-consumers. The current real-world solution that does this is donating food goods to charities who then disseminate to people. The problem with this model is that category 2 groupings don't tend to access this model due to stigma associated with accessing charity assistance. My solution aims to remove the charity from the equation and link people directly through my application, "Hamper".
 
 #### Hamper
-Hamper is a two sided-market place that allows people to create and purchase cheap hampers (or grocery bags) of leftover non-perishables and vegetables. The idea is that Hamper is an alternative model to accessing affordable groceries that's built for mainstream use. Hamper aims to do two things: 1. address food wastage in the community, and 2. give lower income earners access to an affordable platform with no associated stigma.
+Hamper is a two sided-market place that allows people to create and purchase cheap hampers (or grocery bags) of leftover non-perishables and vegetables. The idea is that Hamper is an alternative model to accessing affordable groceries built for mainstream use. Hamper aims to do two things: 1. address food wastage in the community, and 2. give lower income earners access to an affordable platform with no associated stigma.
 
 Getting Started
 -------------
