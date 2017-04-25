@@ -1,3 +1,4 @@
+<div class= "container msg-wrapper">
 <% if @over_ten %>
  <%= link_to 'Show Previous', '?m=all' %>
 <% end %>
@@ -7,10 +8,12 @@
    <% user = User.find(message.user_id) %>
    <div class="item">
     <div class="content">
-     <div class="header"><strong><%= user.username %></strong>    
+      <div class="chip">
+        <img src="<%= user.avatar.url %>" alt="Contact Person">
+        <%= user.username %>
+      </div>
       <div class="list">
        <div class="item">
-        <i class="right triangle icon"></i>
          <%= message.body %>
       </div>
     </div>
@@ -19,12 +22,15 @@
  <% end %>
 <% end %>
 </div>
+<br>
 <%= form_for [@conversation, @message], html: {class: "ui reply form"} do |f| %>
  <div class="field">
-   <%= f.text_area :body, class: "form-control" %>
+   <%= f.label 'Type message' %>
+   <%= f.text_area :body, class: "materialize-textarea" %>
  </div>
  <%= f.text_field :user_id, value: current_user.id, type: "hidden" %>
  <div>
-   <%= f.submit "Add Reply", class: "ui blue labeled submit icon button" %>
+   <%= f.submit "Add Reply", class: "btn waves-effect waves-light" %>
  </div>
 <% end %>
+</div>
