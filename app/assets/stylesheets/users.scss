@@ -4,7 +4,11 @@
   @media #{$small-and-down} {
   .login-page {
     align-items: center;
-    width: 200px;
+    // width: 200px;
+  }
+
+  .hands-img {
+    z-index: -1;
   }
 
   .login-top {
