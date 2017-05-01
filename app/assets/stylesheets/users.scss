@@ -1,19 +1,18 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-  @media #{$small-and-down} {
+@media #{$small-and-down} {
   .login-page {
     align-items: center;
-    // width: 200px;
-  }
-
-  .hands-img {
-    z-index: -1;
   }
 
   .login-top {
     height: 50vh;
     background-image: url("http://res.cloudinary.com/dabq7kxo6/image/upload/v1493017597/tealpattern_cwcm6c.jpg");
+  }
+
+  .hands-img {
+    margin-bottom: 5%;
   }
 
   .top-heading  {
@@ -26,7 +25,6 @@
     margin-bottom: 10%;
   }
 
-
   .form-wrapper {
     margin-top: -40%;
     padding-bottom: 10%;
@@ -36,7 +34,8 @@
 
   .empty-space {
     height: 40vh;
-
+    z-index: 99;
+    position: relative;
   }
 
   .form-text {
@@ -95,7 +94,7 @@
 
 
   // @media only screen and (min-width : 601px) {
-  @media #{$medium-and-up} {
+@media #{$medium-and-up} {
     .login-top {
       height: 50vh;
       background-image: url("http://res.cloudinary.com/dabq7kxo6/image/upload/v1493017597/tealpattern_cwcm6c.jpg");
@@ -130,4 +129,4 @@
     font-size: 2.0em;
   }
 
- }
+}
