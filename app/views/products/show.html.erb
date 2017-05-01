@@ -22,7 +22,7 @@
       <% end %>
     </div>
     <div class= "col s3">
-      <% if correct_user?(@product.user) && @product.created_at < 2.day.ago %>
+      <% if correct_user?(@product.user) && @product.created_at < 5.hours.ago %>
         <%= link_to 'Give', edit_product_path(@product), :class => "waves-effect waves-purple btn" %>
       <% else %>
       <% end %>
@@ -42,7 +42,7 @@
       <p> <i class= "material-icons">shopping_basket</i> Quantity: <%= @product.items %> </p>
     </div>
   </div>
-  <!-- <hr> -->
+
   <div class = "row">
     <div class= "col s12">
       <h5>Contents</h5>
