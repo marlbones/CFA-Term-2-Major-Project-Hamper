@@ -1,4 +1,4 @@
-<div class= "container">
+<div class= "container profile-wrapper">
   <div class= "card top-profile-wrapper">
     <div class= "row">
       <div class= "col s4">
@@ -64,27 +64,29 @@
 <div class= "container">
   <p class= "bigger-text"><%=@user.first_name%>'s Hampers</p>
   <hr>
-  <% @user.products.each do |product| %>
-    <% if product.purchased == false%>
-      <div class="row">
-        <div class="col s12 m7">
-          <div class="card">
-            <div class="card-image">
-              <img class= "resize-img" src="<%= product.images[0].url %>">
-            </div>
-            <div class="card-content">
-              <p><strong><%= product.title %></%></strong></p>
-              <p><%= product.contents %></p>
-            </div>
-            <div class="card-action">
-              <p><%= link_to 'View', product %></p>
+  <div class= "flex-container">
+    <% @user.products.each do |product| %>
+      <% if product.purchased == false%>
+        <!-- <div class="row"> -->
+          <div class="col s12 m7 small-padding">
+            <div class="card card-width">
+              <div class="card-image">
+                <img class= "resize-img" src="<%= product.images[0].url %>">
+              </div>
+              <div class="card-content">
+                <p><strong><%= product.title %></%></strong></p>
+                <p><%= product.contents %></p>
+              </div>
+              <div class="card-action">
+                <p><%= link_to 'View', product %></p>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-    <% else %>
+        <!-- </div> -->
+      <% else %>
+      <% end %>
     <% end %>
-  <% end %>
+  </div>
 </div>
 
 <!-- Refers to method in users_helper. Only makes link appear for current_user -->

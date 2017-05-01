@@ -40,12 +40,12 @@
   </div>
   <br>
 
-
+  <div class= "flex-container">
       <% @products.each do |product| %>
         <% if product.purchased == false%>
           <div class="row">
             <div class="col s12 m7">
-              <div class="card">
+              <div class="card card-width">
                 <div class= "card-content">
                   <div class= "row">
                     <div class= "col s3">
@@ -77,6 +77,7 @@
       <% end %>
     <%= will_paginate @products %>
     <br>
+  </div>
     <!-- Google Maps Display -->
     <div>
       <div id="map" style='height: 400px;'></div>

@@ -44,6 +44,12 @@
   height: 400px;
 }
 
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
 
 // Show page
 .carousel-slider {
@@ -72,4 +78,14 @@
       text-align: left;
       background: #F5F3F7;
     }
+
+    .carousel-slider {
+        height: 400px !important;
+        width: 50% ;
+    }
+
+    .card-width {
+      width: 380px;
+    }
+
   }

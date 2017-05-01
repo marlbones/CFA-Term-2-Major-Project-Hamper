@@ -2,28 +2,29 @@
   <p class= "bigger-text">Hampers you've listed</p>
 </div>
 
-<% @products.each do |product| %>
-  <% if product.purchased == false%>
-    <div class="row">
-      <div class="col s12 m7">
-        <div class="card">
-          <div class="card-image">
-            <img class= "resize-img" src="<%= product.images[0].url %>">
-          </div>
-          <div class="card-content">
-            <p><strong><%= product.title %></%></strong></p>
-            <p><%= product.contents %></p>
-          </div>
-          <div class="card-action">
-            <p><%= link_to 'View', product %></p>
+<div class= "flex-container">
+  <% @products.each do |product| %>
+    <% if product.purchased == false%>
+      <div class="row">
+        <div class="col s12 m7">
+          <div class="card card-width">
+            <div class="card-image">
+              <img class= "resize-img" src="<%= product.images[0].url %>">
+            </div>
+            <div class="card-content">
+              <p><strong><%= product.title %></%></strong></p>
+              <p><%= product.contents %></p>
+            </div>
+            <div class="card-action">
+              <p><%= link_to 'View', product %></p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  <% else %>
+    <% else %>
+    <% end %>
   <% end %>
-<% end %>
-
+</div>
 <div class= "fixed-action-btn horizontal click-to-toggle create-button">
   <%= link_to '+ Create New Hamper', new_product_path, :class => 'waves-effect waves-light btn' %>
 </div>
